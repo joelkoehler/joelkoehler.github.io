@@ -8,7 +8,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+      // https://dashboard.emailjs.com/admin/integration
+      emailjs.init('user_TasmFatPZJKj7mInEuGW0');
+  })();
+</script>
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // generate a five digit number for the contact_number variable
+          this.contact_number.value = Math.random() * 100000 | 0;
+          // these IDs from the previous steps
+          emailjs.sendForm('contact_service', 'contact_form', this)
+              .then(function() {
+                  console.log('SUCCESS!');
+              }, function(error) {
+                  console.log('FAILED...', error);
+              });
+      });
+  }
+</script>
 
 <style>
 body {font-family: "Lato", sans-serif}
@@ -261,7 +283,7 @@ body {font-family: "Lato", sans-serif}
 
       </li>
       <li class="w3-padding">
-        <img src="images/ams.jpg" alt="AMS logo" style="width:8%">
+        <img src="images/AMS.jpg" alt="AMS logo" style="width:8%">
         Applied Motion Systems | Technician Intern<br>
         <p class="w3-opacity">May 2018 - Aug 2018</p>
         <p>Assembled and performed system testing on various industrial machines. The hands-on experience led to a deeper understanding of hardware and electrical engineering practices. This testing contributed to the completion of three multi-million-dollar paper processing machines, and several retrofits for companies like Benchmade.</p>
@@ -278,7 +300,7 @@ body {font-family: "Lato", sans-serif}
         <img src="images/mosh.png" alt="BSU logo" style="width:8%">
         Code With Mosh - Coding Made Simple<br>
         <!-- <span class="w3-opacity">Currently Enrolled</span> -->
-        <span class="w3-tag w3-blue w3-margin-left">Currently enrolled</span>
+        <span class="w3-tag w3-blue">Currently enrolled</span>
         <ul class="w3-ul">
           <li>Working towards a Node.js Certificate</li>
         </ul>
@@ -414,17 +436,17 @@ body {font-family: "Lato", sans-serif}
           <i class="fa fa-linkedin" style="width:30px"></i><a href="https://www.linkedin.com/in/joel-koehler/">LinkedIn</a>
         </div>
         <div class="w3-col m6">
-          <form action="/action_page.php" target="_blank">
+          <form id="contact-form">
             <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
               <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="user_name">
               </div>
               <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="user_email">
               </div>
             </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-            <button class="w3-button w3-black w3-section w3-right" type="submit">THIS BUTTON DOESN'T WORK YET</button>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
           </form>
         </div>
       </div>
