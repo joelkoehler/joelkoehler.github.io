@@ -23,6 +23,7 @@ body {font-family: "Lato", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#code" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CODE</a>
     <a href="#music" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MUSIC</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-right w3-blue w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>     
@@ -38,6 +39,7 @@ body {font-family: "Lato", sans-serif}
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#code" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CODE</a>
   <a href="#music" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MUSIC</a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT ME</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
   <a href="https://github.com/joelkoehler" class="w3-bar-item w3-button w3-blue w3-padding-large">GITHUB</a>
   <a href="https://www.linkedin.com/in/joel-koehler/" class="w3-bar-item w3-button w3-blue w3-padding-large">LINKEDIN</a>
@@ -48,10 +50,10 @@ body {font-family: "Lato", sans-serif}
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
-    <img src="images/portlandDim.jpg" style="width:100%">
+    <img src="images/Banner.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Hi! I'm Joel.</h3>
-      <p><b>I'm a PNW-based software engineer & musician.</b></p>   
+      <!-- <h3>Hi! I'm Joel.</h3>
+      <p><b>I'm a PNW-based software engineer & musician.</b></p>    -->
     </div>
   </div>
   <!-- <div class="mySlides w3-display-container w3-center">
@@ -109,10 +111,11 @@ body {font-family: "Lato", sans-serif}
             <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button>
             <!-- <button class="w3-button w3-white w3-margin-bottom" >Details</button> -->
           </div>
-          
         </div>
       </div>
-      
+      <p class="w3-opacity"><i>...plus many more on my Github!</i></p>
+      <button class="w3-btn w3-ripple w3-blue"><i class="fa fa-github" style="width:30px"></i><a href="https://github.com/joelkoehler" style="text-decoration: none;">View Github</a></button>
+      <!-- <button class="w3-btn w3-white w3-border w3-border-blue w3-round"><i class="fa fa-github" style="width:30px"></i>View Github</button> -->
   </div>
   
   <!-- The Music Section -->
@@ -183,40 +186,107 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Vancouver, WA / Portland, OR<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: (360) 904-6857<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: joel61499@gmail.com<br>
-        <i class="fa fa-linkedin w3-hover-opacity" style="width:30px"></i><a href="https://www.linkedin.com/in/joel-koehler/">LinkedIn</a>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">THIS BUTTON DOESN'T WORK YET</button>
-        </form>
-      </div>
+  <!-- The About Section -->
+
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide w3-center">ABOUT ME</h2>
+    <p class="w3-opacity w3-center"><i>B.S. in Computer Science from Boise State University</i></p>
+    <p class="w3-justify">In the Spring of 2021 I graduated Magna Cum Laude from Boise State University with a B.S. in Computer Science. Since graduation
+      I have been working for Hewlett-Packard as an embedded software engineer. In my free time I've been working on developing my skills 
+      in mobile & web technologies.
+    <p class="w3-opacity"><i>Work Experience</i></p>
+    <ul class="w3-ul w3-white">
+      <li class="w3-padding">
+        <img src="images/hp.jpg" alt="HP Logo" style="width:8%" class="w3-hover-opacity">
+        <span style="width: 92%;">
+          Hewlett-Packard | Embedded Software Engineer<br>
+          <span class="w3-opacity">Started July of 2021</span><span class="w3-tag w3-blue w3-margin-left">Current Position</span>
+          <p>Description</p>
+        </span>
+      </li>
+      <li class="w3-padding">
+        <img src="images/hp.jpg" alt="HP Logo" style="width:8%" class="w3-hover-opacity">
+        Hewlett-Packard | Firmware Engineer Intern<br>
+        <p class="w3-opacity">May 2020 - May 2021</p>
+        <p>Used Google Test & Google Mock to write unit tests for HP’s print engine (C/C++). Gave tutorials on unit testing to my team, presented to upper management and select firmware teams up to 75 people. The gtest tutorial I created will be a guideline for testing other components for HP’s firmware section.</p>
+      </li>
+      <li class="w3-padding">
+        <img src="images/bsu.jpg" alt="BSU logo" style="width:8%" class="w3-hover-opacity">
+        Boise State University | Computer Science Tutor & TA (MySQL & Java)<br>
+        <p class="w3-opacity">Jan 2020 - May 2020</p>
+        <p>Taught and mentored students (1-on-1 and in groups up to 10) in MySQL & Java Database integration. Managed my online and in-person office hours, graded assignments and created automated grading scripts. Responsible for guiding students’ progress towards their academic and professional development.</p>
+
+      </li>
+      <li class="w3-padding">
+        <img src="images/ams.jpg" alt="AMS logo" style="width:8%" class="w3-hover-opacity">
+        Applied Motion Systems | Technician Intern<br>
+        <p class="w3-opacity">May 2018 - Aug 2018</p>
+        <p>Assembled and performed system testing on various industrial machines. The hands-on experience led to a deeper understanding of hardware and electrical engineering practices. This testing contributed to the completion of three multi-million-dollar paper processing machines, and several retrofits for companies like Benchmade.</p>
+      </li>
+    </ul>
+    <br>
+
+    <p class="w3-opacity"><i>Education</i></p>
+
+    <ul class="w3-ul  w3-white">
+      <li class="w3-padding">
+        <img src="images/bsu.jpg" alt="BSU logo" style="width:8%" class="w3-hover-opacity">
+        Boise State University<br>
+        <span class="w3-opacity">Fall 2017 - Spring 2021</span><span class="w3-tag w3-orange w3-margin-left">Computer Science B.S.</span>
+        <ul class="w3-ul">
+          <li>Graduated Magna Cum Laude (3.75 GPA)</li>
+        </ul>
+      </li>
+      <li class="w3-padding">
+        <img src="images/clark.png" alt="Clark Logo" style="width:8%" class="w3-hover-opacity">
+        Clark College<br>
+        <span class="w3-opacity">Fall 2015 - Spring 2017</span>
+        <!-- <ul class="w3-ul">
+          <li>Running Start program</li>
+        </ul> -->
+      </li>
+    </ul>
     </div>
   </div>
+</div>
+
+    <!-- The Contact Section -->
+    <div class="w3-light-grey">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">CONTACT</h2>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Vancouver, WA / Portland, OR<br>
+          <i class="fa fa-phone" style="width:30px"></i> (360) 904-6857<br> 
+          <i class="fa fa-envelope" style="width:30px"> </i> <a href="mailto:joel61499@gmail.com?subject=Email via joelkoehler.github.io">joel61499@gmail.com</a><br>
+          <i class="fa fa-github" style="width:30px"></i> <a href="https://github.com/joelkoehler">Github</a><br>
+          <i class="fa fa-linkedin w3-hover-opacity" style="width:30px"></i><a href="https://www.linkedin.com/in/joel-koehler/">LinkedIn</a>
+        </div>
+        <div class="w3-col m6">
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">THIS BUTTON DOESN'T WORK YET</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
   
 <!-- End Page Content -->
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<!-- <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
 
-</footer>
+</footer> -->
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
