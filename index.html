@@ -29,8 +29,9 @@ body {font-family: "Lato", sans-serif}
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="https://github.com/joelkoehler" class="w3-bar-item w3-button">Github</a>
           <a href="https://www.linkedin.com/in/joel-koehler/" class="w3-bar-item w3-button">Linkedin</a>
+          <a href="resume.pdf" class="w3-bar-item w3-button">Resume</a>
         </div>
-      </div>
+    </div>
   </div>
 </div>
 
@@ -40,8 +41,10 @@ body {font-family: "Lato", sans-serif}
   <a href="#music" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MUSIC</a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT ME</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="https://github.com/joelkoehler" class="w3-bar-item w3-button w3-blue w3-padding-large">GITHUB</a>
+  <a class="w3-bar-item w3-button w3-blue w3-padding-large" onclick="document.getElementById('linksModal').style.display='block'">LINKS</a>
+  <!-- <a href="https://github.com/joelkoehler" class="w3-bar-item w3-button w3-blue w3-padding-large">GITHUB</a>
   <a href="https://www.linkedin.com/in/joel-koehler/" class="w3-bar-item w3-button w3-blue w3-padding-large">LINKEDIN</a>
+  <a href="resume.pdf" class="w3-bar-item w3-button w3-blue w3-padding-large">RESUME</a> -->
 </div>
 
 <!-- Page content -->
@@ -83,7 +86,7 @@ body {font-family: "Lato", sans-serif}
           <span class="w3-tag w3-orange">Coming soon!</span>
           <p>An online voice-chat app that utilizes face-tracking-powered avatars instead of a video feed for a safer chat experience.</p>
           <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-          <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button>
+          <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
         </div>
       </div>
         <div class="w3-third w3-margin-bottom">
@@ -93,7 +96,7 @@ body {font-family: "Lato", sans-serif}
             <!-- <span class="w3-opacity">Spring 2021</span> -->
             <span class="w3-tag w3-orange">Coming soon!</span>
             <p>A web application that uses Google Trends data to create a mock-economy of Google search terms.</p>
-            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button>
+            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
             <!-- <button class="w3-button w3-white w3-margin-bottom" >Details</button> -->
           </div>
         </div>
@@ -205,10 +208,10 @@ body {font-family: "Lato", sans-serif}
   </div>
 
   <!-- No Content Modal -->
-  <div id="ticketModal" class="w3-modal">
+  <div id="wipModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+        <span onclick="document.getElementById('wipModal').style.display='none'" 
        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
         <h2 class="w3-wide"><i class="fa fa-exclamation-circle"></i>WIP</h2>
       </header>
@@ -224,12 +227,33 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
+    <!-- Links Modal -->
+    <div id="linksModal" class="w3-modal">
+      <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-blue w3-center w3-padding-32"> 
+          <span onclick="document.getElementById('linksModal').style.display='none'" 
+         class="w3-button w3-blue w3-xlarge w3-display-topright">×</span>
+          <h2 class="w3-wide"><i class="fa fa-link"></i>LINKS</h2>
+        </header>
+        <div class="w3-container">
+          <ul class="w3-ul w3-white w3-text-grey w3-hoverable w3-center">
+            <li class="w3-padding"><a href="https://github.com/joelkoehler" class="w3-bar-item w3-button w3-center">Github</a></li>
+            <li class="w3-padding"><a href="https://www.linkedin.com/in/joel-koehler/" class="w3-bar-item w3-button w3-center">Linkedin</a></li>
+            <li class="w3-padding"><a href="resume.pdf" class="w3-bar-item w3-button">Resume</a></li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   <!-- The About Section -->
 
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="about">
     <h2 class="w3-wide w3-center">ABOUT ME</h2>
     <p class="w3-opacity w3-center"><i> <i class="fa fa-graduation-cap" aria-hidden="true"></i>
       B.S. in Computer Science from Boise State University</i></p>
+    <!-- <p class="w3-opacity w3-center"><i> <i class="fa fa-building" aria-hidden="true"></i>
+      Working for Hewlett-Packard as a Embedded Software Engineer</i></p> -->
+
     <p class="w3-justify">In the Spring of 2021 I graduated Magna Cum Laude from Boise State University with a B.S. in Computer Science. Since graduation
       I have been working for Hewlett-Packard as an embedded software engineer. In my free time I've been working on developing my skills 
       in mobile & web technologies.</p><br>
@@ -243,7 +267,7 @@ body {font-family: "Lato", sans-serif}
         <span style="width: 92%;">
           Hewlett-Packard | Embedded Software Engineer<br>
           <span class="w3-opacity">Started July of 2021</span><span class="w3-tag w3-blue w3-margin-left">Current Position</span>
-          <p>I am supporting HP Print Engine development by implementing enhancements, updates, and changes for portions and subsystems of firmware at both application and driver levels. I have the priveledge to work alongside a team that spans multiple continents and cultures at a fortune 50 company. I am gaining experience with a large complex codebase that contains both vital legacy code and bleeding edge advancements in embedded firmware. Notable projects have included mentoring and supporting a summer intern, spearheading the design and implementation of a context-free grammar for a proprietary programming language, working with QT Creator to maintain the XML/C++ UI subsystem, migrating legacy code from C to C++, and spinning up Google test suites for driver components.</p>
+          <p>I am supporting HP Print Engine development by implementing enhancements, updates, and changes for portions and subsystems of firmware at both application and driver levels. I have the privilege to work alongside a team that spans multiple continents and cultures at a fortune 50 company. I am gaining experience with a large complex codebase that contains both vital legacy code and bleeding edge advancements in embedded firmware. Notable projects have included mentoring and supporting a summer intern, spearheading the design and implementation of a context-free grammar for a proprietary programming language, working with QT Creator to maintain the XML/C++ UI subsystem, migrating legacy code from C to C++, and spinning up Google test suites for driver components.</p>
         </span>
       </li>
       <li class="w3-padding">
@@ -381,7 +405,7 @@ body {font-family: "Lato", sans-serif}
            </li>
            <li>Source Control & tools
              <ul>
-               <li>Git, Github, Github enterprize, Gerrit</li>
+               <li>Git, Github, Github enterprise, Gerrit</li>
                <li>Some experience with Jenkins, Circle CI, AutoCI, and Docker</li>
              </ul>
            </li>
@@ -472,7 +496,15 @@ function myFunction() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
+var modal = document.getElementById('wipModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('linksModal');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
