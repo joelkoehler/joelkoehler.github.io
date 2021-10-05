@@ -335,7 +335,7 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-row">
     <div class="w3-col m6">
 
-      <button onclick="accordian('ac1')" class="w3-button w3-block w3-left-align">
+      <button onclick="accordian('ac1')" class="w3-button w3-block w3-white" id="ban1">
         Web Development <i class="fa fa-caret-down"></i></button>
         <div id="ac1" class="w3-container w3-hide">
           <ul>
@@ -344,7 +344,7 @@ body {font-family: "Lato", sans-serif}
           </ul>
         </div>
 
-        <button onclick="accordian('ac2')" class="w3-button w3-block w3-left-align">
+        <button onclick="accordian('ac2')" class="w3-button w3-block w3-white" id="ban2">
           Mobile Development <i class="fa fa-caret-down"></i></button>
           <div id="ac2" class="w3-container w3-hide">
             <ul>
@@ -354,7 +354,7 @@ body {font-family: "Lato", sans-serif}
             </ul>
           </div>
 
-          <button onclick="accordian('ac3')" class="w3-button w3-block w3-left-align">
+          <button onclick="accordian('ac3')" class="w3-button w3-block w3-white" id="ban3">
             Databases <i class="fa fa-caret-down"></i></button>
             <div id="ac3" class="w3-container w3-hide">
               <ul>
@@ -364,7 +364,7 @@ body {font-family: "Lato", sans-serif}
               </ul>
             </div>
 
-            <button onclick="accordian('ac4')" class="w3-button w3-block w3-left-align">
+            <button onclick="accordian('ac4')" class="w3-button w3-block w3-white" id="ban4">
               UI Tools <i class="fa fa-caret-down"></i></button>
               <div id="ac4" class="w3-container w3-hide">
                 <ul>
@@ -375,7 +375,7 @@ body {font-family: "Lato", sans-serif}
                 </ul>
               </div>
 
-              <button onclick="accordian('ac5')" class="w3-button w3-block w3-left-align">
+              <button onclick="accordian('ac5')" class="w3-button w3-block w3-white"id="ban5">
                 Software Design <i class="fa fa-caret-down"></i></button>
                 <div id="ac5" class="w3-container w3-hide">
                   <ul>
@@ -384,7 +384,7 @@ body {font-family: "Lato", sans-serif}
                   </ul> 
                 </div>
 
-                <button onclick="accordian('ac6')" class="w3-button w3-block w3-left-align">
+                <button onclick="accordian('ac6')" class="w3-button w3-block w3-white" id="ban6">
                   Language Design <i class="fa fa-caret-down"></i></button>
                   <div id="ac6" class="w3-container w3-hide">
                     <ul>
@@ -395,7 +395,7 @@ body {font-family: "Lato", sans-serif}
     </div>
     <div class="w3-col m6">
 
-      <button onclick="accordian('ac7')" class="w3-button w3-block w3-left-align">
+      <button onclick="accordian('ac7')" class="w3-button w3-block w3-white" id="ban7">
         Embedded Software / Firmware <i class="fa fa-caret-down"></i></button>
         <div id="ac7" class="w3-container w3-hide">
           <ul>
@@ -406,7 +406,7 @@ body {font-family: "Lato", sans-serif}
           </ul>
         </div>
 
-        <button onclick="accordian('ac8')" class="w3-button w3-block w3-left-align">
+        <button onclick="accordian('ac8')" class="w3-button w3-block w3-white" id="ban8">
           Dotnet <i class="fa fa-caret-down"></i></button>
           <div id="ac8" class="w3-container w3-hide">
             <ul>
@@ -415,7 +415,7 @@ body {font-family: "Lato", sans-serif}
             </ul>
           </div>
 
-          <button onclick="accordian('ac9')" class="w3-button w3-block w3-left-align">
+          <button onclick="accordian('ac9')" class="w3-button w3-block w3-white" id="ban9">
             Audio <i class="fa fa-caret-down"></i></button>
             <div id="ac9" class="w3-container w3-hide">
               <ul>
@@ -425,15 +425,15 @@ body {font-family: "Lato", sans-serif}
               </ul>
             </div>
 
-            <button onclick="accordian('ac10')" class="w3-button w3-block w3-left-align">
+            <button onclick="accordian('ac10')" class="w3-button w3-block w3-white" id="ban10">
               QA / Testing <i class="fa fa-caret-down"></i></button>
               <div id="ac10" class="w3-container w3-hide">
                 <ul>
                   <li>Significant unit test experience (Google Test suite, gtest, gmock, JUnit)</li>
                 </ul>
               </div>
-
-              <button onclick="accordian('ac11')" class="w3-button w3-block w3-left-align">
+              <!-- w3-left-align -->
+              <button onclick="accordian('ac11')" class="w3-button w3-block w3-white" id="ban11"> 
                 Source Control & Tools <i class="fa fa-caret-down"></i></button>
                 <div id="ac11" class="w3-container w3-hide">
                   <ul>
@@ -442,7 +442,7 @@ body {font-family: "Lato", sans-serif}
                   </ul>
                 </div>
 
-                <button onclick="accordian('ac12')" class="w3-button w3-block w3-left-align">
+                <button onclick="accordian('ac12')" class="w3-button w3-block w3-white" id="ban12">
                   Scrum Tools <i class="fa fa-caret-down"></i></button>
                   <div id="ac12" class="w3-container w3-hide">
                     <ul>
@@ -525,6 +525,19 @@ function accordian(id) {
   } else {
     x.className = x.className.replace(" w3-show", "");
   }
+  let buttonId = 'ban' + id.substring(2);
+  console.log(buttonId);
+
+  if ( document.getElementById(buttonId).classList.contains('w3-black') ) {
+    document.getElementById(buttonId).classList.add('w3-white');
+    document.getElementById(buttonId).classList.remove('w3-black');
+  }
+  else if ( document.getElementById(buttonId).classList.contains('w3-white') ) {
+    document.getElementById(buttonId).classList.add('w3-black');
+    document.getElementById(buttonId).classList.remove('w3-white');
+  }
+
+
 }
 
 function myFunction() {
