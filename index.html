@@ -8,6 +8,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<style>
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        /* width: 300px;
+        height: 300px; */
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+</style>
 
 <style>
 body {font-family: "Lato", sans-serif}
@@ -16,7 +37,7 @@ body {font-family: "Lato", sans-serif}
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
+<div class="w3-top" style="z-index: 1000;">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
@@ -62,82 +83,85 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-container w3-content w3-center" style="max-width:800px" >
     <h2 class="w3-wide">CODE</h2>
     <p class="w3-opacity"><i>Here's a few of the projects I've' been working on:</i></p>
-    
-    <div class="w3-row-padding w3-padding-32 w3-center w3-display-container" style="margin:0 -16px">
 
-      <p id="pager">x</p>
+    <div class="swiper mySwiper">
+    <div class="w3-row-padding w3-padding-32 w3-center w3-display-container swiper-wrapper" style="margin:0 -16px">
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large w3-center" style="width: 60%; margin: 0 auto;">
+      <!-- <p id="pager">x</p> -->
+
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large w3-center" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images/node.jpg" alt="Paris" style="width:100%">
           <h5><b>Realtime</b></h5>
           <span class="w3-tag w3-orange">Coming soon!</span>
           <p>An online voice-chat app that utilizes face-tracking-powered avatars instead of a video feed for a safer chat experience.</p>
           <div class="w3-section">
-            <button class="w3-button w3-block w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
+            <button class="w3-btn w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
           </div>
         </div>
       </div>
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images/django.jpg" alt="Paris" style="width:100%">
           <h5><b>Trend Exchange</b></h5>
           <span class="w3-tag w3-orange">Coming soon!</span>
           <p>A web application that uses Google Trends data to create a mock-economy of Google search terms.</p>
           <div class="w3-section">
-            <button class="w3-button w3-block w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
+            <button class="w3-button w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
           </div>
         </div>
       </div>
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images/flutterTransparent.png" alt="Paris" style="width:100%">
           <h5><b>Fonetic</b></h5>
           <p>A cross-platform app that offers real-time offline speech transcription of the world around you.</p>
           <div class="w3-section">
-            <a href="https://github.com/joelkoehler/Fonetic-Live-Transcription" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+            <a href="https://github.com/joelkoehler/Fonetic-Live-Transcription" style="text-decoration: none;"><button class="w3-button w3-dark-grey">Details</button></a>
           </div>
         </div>
       </div>
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images/ios.png" alt="New York" style="width:100%">
           <h5><b>Dartboard</b></h5>
           <p>An iOS app that aims to spark social-distanced adventure during the pandemic by "throwing a dart" at a map.</p>
           <div class="w3-section">
-            <a href="https://github.com/joelkoehler/Dartboard-iOS" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+            <a href="https://github.com/joelkoehler/Dartboard-iOS" style="text-decoration: none;"><button class="w3-button w3-dark-grey" >Details</button></a>
           </div>
         </div>
       </div>
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images/juce.png" alt="New York" style="width:100%">
           <h5><b>Ambient Dreams</b></h5>
           <p>A VST plugin that generates an ambient pad for use in music production and live performances.</p>
           <div class="w3-section">
-            <a href="https://github.com/AJ-Trantham/ambient-dreams" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey">Details</button></a>
+            <a href="https://github.com/AJ-Trantham/ambient-dreams" style="text-decoration: none;"><button class="w3-button w3-dark-grey">Details</button></a>
           </div>
         </div>
       </div>
 
-      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+      <div class="swiper-slide w3-card-4 w3-border w3-round-large" style="width: 65%; margin: 0 auto;">
         <div class="w3-container w3-center">
           <img src="images//bash.png" alt="New York" style="width:100%">
           <h5><b>Smash Terminal</b></h5>
           <p>Smash Terminal is an attempt at recreating the bash command-line-interface from scratch using the C language.</p>
           <div class="w3-section">
-            <a href="https://github.com/joelkoehler/smash-terminal" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+            <a href="https://github.com/joelkoehler/smash-terminal" style="text-decoration: none;"><button class="w3-button w3-dark-grey" >Details</button></a>
           </div>
         </div>
       </div>
 
-      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+      <!-- <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button> -->
 
+    </div>
+    <div class="swiper-pagination"></div>
     </div>
 
       <p class="w3-opacity"><i>...plus many more on my Github!</i></p>
@@ -155,9 +179,9 @@ body {font-family: "Lato", sans-serif}
       <p class="w3-opacity w3-center"><i>I am a part of two PDX-based bands and have produced for several artists</i></p><br>
 
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">With Hesitance <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue w3-margin-left">Vocals</span></li>
-        <li class="w3-padding">File Thirteen <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue w3-margin-left">Vocals</span><span class="w3-tag w3-teal w3-margin-left">Drums</span><span class="w3-tag w3-orange w3-margin-left">Production</span></li>
-        <li class="w3-padding">Shutters <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue w3-margin-left">Vocals</span><span class="w3-tag w3-teal w3-margin-left">Drums</span><span class="w3-tag w3-orange w3-margin-left">Production</span><span class="w3-tag w3-purple w3-margin-left">Bass</span></li>
+        <li class="w3-padding">With Hesitance <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue ">Vocals</span></li>
+        <li class="w3-padding">File Thirteen <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue ">Vocals</span><span class="w3-tag w3-teal ">Drums</span><span class="w3-tag w3-orange ">Production</span></li>
+        <li class="w3-padding">Shutters <span class="w3-tag w3-red w3-margin-left">Guitar</span><span class="w3-tag w3-blue ">Vocals</span><span class="w3-tag w3-teal ">Drums</span><span class="w3-tag w3-orange ">Production</span><span class="w3-tag w3-purple ">Bass</span></li>
         <li class="w3-padding">Bitterroot <span class="w3-tag w3-orange w3-margin-left">Production</span></li>
       </ul>
 
@@ -466,25 +490,28 @@ body {font-family: "Lato", sans-serif}
 <!-- Footer -->
 <!-- <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
 </footer> -->
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-// var myIndex = 0;
-// carousel();
 
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 4000);    
-// }
-
-// Used to toggle the menu on small screens when clicking on the menu button
+// Initialize Swiper
+var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 
 function accordian(id) {
   var x = document.getElementById(id);
