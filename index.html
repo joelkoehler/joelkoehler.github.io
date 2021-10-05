@@ -42,117 +42,106 @@ body {font-family: "Lato", sans-serif}
   <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT ME</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
   <a class="w3-bar-item w3-button w3-blue w3-padding-large" onclick="document.getElementById('linksModal').style.display='block'">LINKS</a>
-  <!-- <a href="https://github.com/joelkoehler" class="w3-bar-item w3-button w3-blue w3-padding-large">GITHUB</a>
-  <a href="https://www.linkedin.com/in/joel-koehler/" class="w3-bar-item w3-button w3-blue w3-padding-large">LINKEDIN</a>
-  <a href="resume.pdf" class="w3-bar-item w3-button w3-blue w3-padding-large">RESUME</a> -->
 </div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
+  <div class="w3-display-container w3-center">
     <img src="images/Banner.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <!-- <h3>Hi! I'm Joel.</h3>
       <p><b>I'm a PNW-based software engineer & musician.</b></p>    -->
     </div>
   </div>
-  <!-- <div class="mySlides w3-display-container w3-center">
-    <img src="images/guitar.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Hi! I'm Joel.</h3>
-      <p><b>I also make music</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/chicago.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div> -->
   </div>
 
   <!-- The Code Section -->
   <div class="w3-padding-32" id="code"></div>
-  <div class="w3-container w3-content w3-center " style="max-width:800px" >
+  <div class="w3-container w3-content w3-center" style="max-width:800px" >
     <h2 class="w3-wide">CODE</h2>
     <p class="w3-opacity"><i>Here's a few of the projects I've' been working on:</i></p>
-    <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-      <div class="w3-third w3-margin-bottom">
-        <img src="images/node.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-        <div class="w3-container w3-black">
-          <p><b>Realtime</b></p>
+    
+    <div class="w3-row-padding w3-padding-32 w3-center w3-display-container" style="margin:0 -16px">
+
+      <p id="pager">x</p>
+
+      <div class="mySlides w3-card-4 w3-border w3-round-large w3-center" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images/node.jpg" alt="Paris" style="width:100%">
+          <h5><b>Realtime</b></h5>
           <span class="w3-tag w3-orange">Coming soon!</span>
           <p>An online voice-chat app that utilizes face-tracking-powered avatars instead of a video feed for a safer chat experience.</p>
-          <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-          <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
-        </div>
-      </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/django.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-black">
-            <p><b>Trend Exchange</b></p>
-            <!-- <span class="w3-opacity">Spring 2021</span> -->
-            <span class="w3-tag w3-orange">Coming soon!</span>
-            <p>A web application that uses Google Trends data to create a mock-economy of Google search terms.</p>
-            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
-            <!-- <button class="w3-button w3-white w3-margin-bottom" >Details</button> -->
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/flutterTransparent.png" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-black">
-            <p><b>Fonetic</b></p>
-            <p class="w3-opacity">Spring 2021</p>
-            <p>A cross-platform app that offers real-time offline speech transcription of the world around you.</p>
-            <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-            <a href="https://github.com/joelkoehler/Fonetic-Live-Transcription"><button class="w3-button w3-white w3-margin-bottom" >Details</button></a>
+          <div class="w3-section">
+            <button class="w3-button w3-block w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
           </div>
         </div>
       </div>
-      <!-- <p class="w3-opacity"><i>...plus many more on my Github!</i></p> -->
-      <!-- <button class="w3-btn w3-ripple w3-blue"><i class="fa fa-github" style="width:30px"></i><a href="https://github.com/joelkoehler" style="text-decoration: none;">View Github</a></button> -->
-      <!-- <button class="w3-btn w3-white w3-border w3-border-blue w3-round"><i class="fa fa-github" style="width:30px"></i>View Github</button> --> 
-  </div>
 
-
-  <div class="w3-container w3-content w3-center " style="max-width:800px" >
-    <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/ios.png" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-black">
-            <p><b>Dartboard</b></p>
-            <p class="w3-opacity">Winter 2020</p>
-            <p>An iOS app that aims to spark social-distanced adventure during the pandemic by "throwing a dart" at a map.</p>
-            <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-            <a href="https://github.com/joelkoehler/Dartboard-iOS"><button class="w3-button w3-white w3-margin-bottom" >Details</button></a>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/juce.png" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-black">
-            <p><b>Ambient Dreams</b></p>
-            <p class="w3-opacity">Fall 2020</p>
-            <p>A VST plugin that generates an ambient pad for use in music production and live performances.</p>
-            <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-            <a href="https://github.com/AJ-Trantham/ambient-dreams"><button class="w3-button w3-white w3-margin-bottom" >Details</button></a>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images//bash.png" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-black">
-            <p><b>Smash Terminal</b></p>
-            <p class="w3-opacity">Winter 2019</p>
-            <p>Smash Terminal is an attempt at recreating the bash command-line-interface from scratch using the C language.</p>
-            <!-- <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
-            <a href="https://github.com/joelkoehler/smash-terminal"><button class="w3-button w3-white w3-margin-bottom" >Details</button></a>
+      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images/django.jpg" alt="Paris" style="width:100%">
+          <h5><b>Trend Exchange</b></h5>
+          <span class="w3-tag w3-orange">Coming soon!</span>
+          <p>A web application that uses Google Trends data to create a mock-economy of Google search terms.</p>
+          <div class="w3-section">
+            <button class="w3-button w3-block w3-dark-grey" onclick="document.getElementById('wipModal').style.display='block'">Details</button>
           </div>
         </div>
       </div>
+
+      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images/flutterTransparent.png" alt="Paris" style="width:100%">
+          <h5><b>Fonetic</b></h5>
+          <p>A cross-platform app that offers real-time offline speech transcription of the world around you.</p>
+          <div class="w3-section">
+            <a href="https://github.com/joelkoehler/Fonetic-Live-Transcription" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images/ios.png" alt="New York" style="width:100%">
+          <h5><b>Dartboard</b></h5>
+          <p>An iOS app that aims to spark social-distanced adventure during the pandemic by "throwing a dart" at a map.</p>
+          <div class="w3-section">
+            <a href="https://github.com/joelkoehler/Dartboard-iOS" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images/juce.png" alt="New York" style="width:100%">
+          <h5><b>Ambient Dreams</b></h5>
+          <p>A VST plugin that generates an ambient pad for use in music production and live performances.</p>
+          <div class="w3-section">
+            <a href="https://github.com/AJ-Trantham/ambient-dreams" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey">Details</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides w3-card-4 w3-border w3-round-large" style="width: 60%; margin: 0 auto;">
+        <div class="w3-container w3-center">
+          <img src="images//bash.png" alt="New York" style="width:100%">
+          <h5><b>Smash Terminal</b></h5>
+          <p>Smash Terminal is an attempt at recreating the bash command-line-interface from scratch using the C language.</p>
+          <div class="w3-section">
+            <a href="https://github.com/joelkoehler/smash-terminal" style="text-decoration: none;"><button class="w3-button w3-block w3-dark-grey" >Details</button></a>
+          </div>
+        </div>
+      </div>
+
+      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+    </div>
+
       <p class="w3-opacity"><i>...plus many more on my Github!</i></p>
       <button class="w3-btn w3-ripple w3-blue"><i class="fa fa-github" style="width:30px"></i><a href="https://github.com/joelkoehler" style="text-decoration: none;">View Github</a></button>
-      <!-- <button class="w3-btn w3-white w3-border w3-border-blue w3-round"><i class="fa fa-github" style="width:30px"></i>View Github</button> --> 
   </div>
   <div class="w3-padding-32"></div>
 
@@ -179,7 +168,6 @@ body {font-family: "Lato", sans-serif}
             <p><b>File Thirteen</b></p>
             <p class="w3-opacity">Est. 2017</p>
             <p>PDX-based garage rock band</p>
-            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
             <a href="https://linktr.ee/filethirteenofficial"><button class="w3-button w3-black w3-margin-bottom">Details</button></a>
 
           </div>
@@ -190,7 +178,6 @@ body {font-family: "Lato", sans-serif}
             <p><b>Shutters</b></p>
             <p class="w3-opacity">Est. 2019</p>
             <p>My solo emo project</p>
-            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Details</button> -->
             <a href="https://soundcloud.com/5ktn"><button class="w3-button w3-black w3-margin-bottom">Details</button></a>
           </div>
         </div>
@@ -216,13 +203,6 @@ body {font-family: "Lato", sans-serif}
         <h2 class="w3-wide"><i class="fa fa-exclamation-circle"></i>WIP</h2>
       </header>
       <div class="w3-container">
-        <!-- <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p> -->
       </div>
     </div>
   </div>
@@ -257,17 +237,14 @@ body {font-family: "Lato", sans-serif}
     <p class="w3-justify">In the Spring of 2021 I graduated from Boise State University with a B.S. in Computer Science. Since graduation
       I have been working for Hewlett-Packard as an embedded software engineer. In my free time I've been working on developing my skills 
       in mobile & web technologies.</p><br>
-      <h5 class="w3-wide w3-left">EXPERIENCE</h5><br><br>
-
-    <!-- <p class="w3-opacity"><i>Work Experience</i></p> -->
-
+    <h5 class="w3-wide w3-left">EXPERIENCE</h5><br><br>
     <ul class="w3-ul w3-white">
       <li class="w3-padding">
         <img src="images/hp.jpg" alt="HP Logo" style="width:8%">
         <span style="width: 92%;">
           Hewlett-Packard | Embedded Software Engineer<br>
-          <span class="w3-opacity">Started July of 2021</span><span class="w3-tag w3-blue w3-margin-left">Current Position</span>
-          <p>I am supporting HP Print Engine development by implementing enhancements, updates, and changes for portions and subsystems of firmware at both application and driver levels. I have the privilege to work alongside a team that spans multiple continents and cultures at a fortune 50 company. I am gaining experience with a large complex codebase that contains both vital legacy code and bleeding edge advancements in embedded firmware. Notable projects have included mentoring and supporting a summer intern, spearheading the design and implementation of a context-free grammar for a proprietary programming language, working with QT Creator to maintain the XML/C++ UI subsystem, migrating legacy code from C to C++, and spinning up Google test suites for driver components.</p>
+          <span class="w3-opacity">Started June of 2021</span><span class="w3-tag w3-blue w3-margin-left">Current Position</span>
+          <p>I am supporting HP Print Engine development by implementing enhancements, updates, and changes for portions and subsystems of firmware at both application and driver levels. I have the privilege to work alongside a team that spans multiple continents and cultures at a fortune 50 company. I am gaining experience with a large complex codebase that contains both vital legacy code and new advancements & technologies in embedded firmware. Notable projects have included mentoring and supporting a summer intern, spearheading the design and implementation of a context-free grammar for a proprietary programming language, working with QT Creator to maintain the XML/C++ UI subsystem, migrating legacy code from C to C++, and spinning up Google test suites for driver components.</p>
         </span>
       </li>
       <li class="w3-padding">
@@ -293,15 +270,12 @@ body {font-family: "Lato", sans-serif}
     <br>
 
     <h5 class="w3-wide w3-left">EDUCATION</h5><br><br>
-
-    <!-- <p class="w3-opacity"><i>Education</i></p> -->
-
     <ul class="w3-ul  w3-white">
       <li class="w3-padding">
         <img src="images/mosh.png" alt="BSU logo" style="width:8%">
         Code With Mosh - Coding Made Simple<br>
         <!-- <span class="w3-opacity">Currently Enrolled</span> -->
-        <span class="w3-tag w3-blue">Currently enrolled</span>
+        <span class="w3-opacity">Fall 2021</span><span class="w3-tag w3-blue w3-margin-left">Currently enrolled</span>
         <ul class="w3-ul">
           <li>Working towards a Node.js Certificate</li>
         </ul>
@@ -424,6 +398,134 @@ body {font-family: "Lato", sans-serif}
   </div>
 </div>
 
+<div class="w3-container w3-content w3-padding-32" style="max-width:800px">
+  <h5 class="w3-wide w3-left">SKILLS</h5>
+  <div class="w3-row">
+    <div class="w3-col m6">
+
+      <button onclick="accordian('ac1')" class="w3-button w3-block w3-left-align">
+        Web Development <i class="fa fa-caret-down"></i></button>
+        <div id="ac1" class="w3-container w3-hide">
+          <ul>
+            <li>HTML & CSS (Bootstrap, w3.css)</li>
+            <li>Node.js/Express.js, PHP, Django/Python</li>
+          </ul>
+        </div>
+
+        <button onclick="accordian('ac2')" class="w3-button w3-block w3-left-align">
+          Mobile Development <i class="fa fa-caret-down"></i></button>
+          <div id="ac2" class="w3-container w3-hide">
+            <ul>
+              <li>iOS (Swift, Xcode)</li>
+              <li>Flutter (Dart)</li>
+              <li>Strong Java background</li>
+            </ul>
+          </div>
+
+          <button onclick="accordian('ac3')" class="w3-button w3-block w3-left-align">
+            Databases <i class="fa fa-caret-down"></i></button>
+            <div id="ac3" class="w3-container w3-hide">
+              <ul>
+                <li>MySQL (Worked for BSU as a tutor)</li>
+                <li>NoSQL (MongoDB)</li>
+                <li>Database design</li>
+              </ul>
+            </div>
+
+            <button onclick="accordian('ac4')" class="w3-button w3-block w3-left-align">
+              UI Tools <i class="fa fa-caret-down"></i></button>
+              <div id="ac4" class="w3-container w3-hide">
+                <ul>
+                  <li>Adobe XD</li>
+                  <li>Windows Forms (Dotnet)</li>
+                  <li>Swing, Netbeans (Java)</li>
+                  <li>QT Creator (C++/XML)</li>
+                </ul>
+              </div>
+
+              <button onclick="accordian('ac5')" class="w3-button w3-block w3-left-align">
+                Software Design <i class="fa fa-caret-down"></i></button>
+                <div id="ac5" class="w3-container w3-hide">
+                  <ul>
+                    <li>Wealth of experience designing and implementing Object-Oriented systems</li>
+                    <li>UML diagram design</li>   
+                  </ul> 
+                </div>
+
+                <button onclick="accordian('ac6')" class="w3-button w3-block w3-left-align">
+                  Language Design <i class="fa fa-caret-down"></i></button>
+                  <div id="ac6" class="w3-container w3-hide">
+                    <ul>
+                      <li>Industry experience developing both context-free grammars and interpretors for proprietary languages</li>
+                    </ul>
+                  </div>
+
+    </div>
+    <div class="w3-col m6">
+
+      <button onclick="accordian('ac7')" class="w3-button w3-block w3-left-align">
+        Embedded Software / Firmware <i class="fa fa-caret-down"></i></button>
+        <div id="ac7" class="w3-container w3-hide">
+          <ul>
+            <li>C, C++</li>
+            <li>UI development (XML and C++)</li>
+            <li>Multi debugger tool</li>
+            <li>Experience developing for large codebases in HP's print division for both Linux and in-house operating systems</li>
+          </ul>
+        </div>
+
+        <button onclick="accordian('ac8')" class="w3-button w3-block w3-left-align">
+          Dotnet <i class="fa fa-caret-down"></i></button>
+          <div id="ac8" class="w3-container w3-hide">
+            <ul>
+              <li>C#, VB.NET</li>
+              <li>Visual Studio IDE</li>
+            </ul>
+          </div>
+
+          <button onclick="accordian('ac9')" class="w3-button w3-block w3-left-align">
+            Audio <i class="fa fa-caret-down"></i></button>
+            <div id="ac9" class="w3-container w3-hide">
+              <ul>
+                <li>JUCE C++ framework for creating VST plugins</li>
+                <li>Deep knowledge of audio synthesis and theory</li>
+                <li>Some experience working with MIDI</li>
+              </ul>
+            </div>
+
+            <button onclick="accordian('ac10')" class="w3-button w3-block w3-left-align">
+              QA / Testing <i class="fa fa-caret-down"></i></button>
+              <div id="ac10" class="w3-container w3-hide">
+                <ul>
+                  <li>Significant unit test experience (Google Test suite, gtest, gmock, JUnit)</li>
+                </ul>
+              </div>
+
+              <button onclick="accordian('ac11')" class="w3-button w3-block w3-left-align">
+                Source Control & Tools <i class="fa fa-caret-down"></i></button>
+                <div id="ac11" class="w3-container w3-hide">
+                  <ul>
+                    <li>Git, Github, Github enterprise, Gerrit</li>
+                    <li>Some experience with Jenkins, Circle CI, AutoCI, and Docker</li>
+                  </ul>
+                </div>
+
+                <button onclick="accordian('ac12')" class="w3-button w3-block w3-left-align">
+                  Scrum Tools <i class="fa fa-caret-down"></i></button>
+                  <div id="ac12" class="w3-container w3-hide">
+                    <ul>
+                      <li>Jira, Trello, Github's Zenhub/project board</li>
+                    </ul>
+                  </div>
+
+    </div>
+  </div>
+  </div>    
+
+</div>
+</div>
+</div>
+
     <!-- The Contact Section -->
     <div class="w3-light-grey">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -450,12 +552,6 @@ body {font-family: "Lato", sans-serif}
             <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
             <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
           </form>
-          <!-- <form action="https://formsubmit.co/joel61499@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New message from joelkoehler.github.io">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <button type="submit">Send</button>
-       </form> -->
         </div>
       </div>
     </div>
@@ -470,22 +566,32 @@ body {font-family: "Lato", sans-serif}
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+// var myIndex = 0;
+// carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}    
+//   x[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 4000);    
+// }
 
 // Used to toggle the menu on small screens when clicking on the menu button
+
+function accordian(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
 function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
@@ -510,7 +616,48 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  if(slideIndex > 6) {
+    document.getElementById("pager").innerHTML = '1/6';
+  }
+  else if (slideIndex < 1) {
+    document.getElementById("pager").innerHTML = '6/6';
+  }
+  else {
+    document.getElementById("pager").innerHTML = `${slideIndex}/6`;
+  }
+
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+
 </script>
+
 
 </body>
 </html>
